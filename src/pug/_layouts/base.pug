@@ -1,0 +1,43 @@
+- var isDevelopment = false;
+- var isIndex = true;
+- var currentPage;
+- var bodyClass;
+
+- var favicons = [{rel: "shortcut icon", sizes: "", href: "img/favicons/favicon.ico"}, {rel: "apple-touch-icon", sizes: "", href: "img/favicons/apple-touch-icon.png"}, {rel: "apple-touch-icon", sizes: "72x72", href: "img/favicons/apple-touch-icon-72x72.png"}, {rel: "apple-touch-icon", sizes: "144x144", href: "img/favicons/apple-touch-icon-114x114.png"} ];
+
+block variables
+
+doctype html
+html( lang="ru" )
+	head
+		meta( charset="utf-8" )
+		meta( name="viewport", content="width=device-width, initial-scale=1.0" )
+
+		title
+			block title
+
+		each item in favicons
+			link(rel=item.rel, sizes=item.sizes, href=item.href)
+
+		block styles
+		if (isDevelopment)
+			link( href="css/main.css", rel="stylesheet" )
+		else
+			link( href="css/main.min.css", rel="stylesheet" )
+
+	body(class=bodyClass)
+		include ../../img/svg-sprite.svg
+		header( block="page-header" )
+
+			block content
+
+		main( block="main-content" )
+			block main-content
+
+		footer( block="page-footer" )
+
+		block scripts
+		if (isDevelopment)
+			script( src="js/main.js" )
+		else
+			script( src="js/main.min.js" )

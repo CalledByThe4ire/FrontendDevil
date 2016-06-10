@@ -1,0 +1,58 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "description",
+  "author": "Andrey Karamnoff",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CalledByThe4ire/FrontendDevil"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "bower": "latest",
+    "browser-sync": "latest",
+    "cross-env": "latest",
+    "css-mqpacker": "latest",
+    "del": "latest",
+    "editorconfig-tools": "latest",
+    "eslint": "latest",
+    "foldero": "latest",
+    "fs": "latest",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-beml": "latest",
+    "gulp-cheerio": "latest",
+    "gulp-csso": "latest",
+    "gulp-gh-pages": "latest",
+    "gulp-html-prettify": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-postcss": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-svgstore": "latest",
+    "gulp-uglify": "latest",
+    "gulp.spritesmith": "latest",
+    "imagemin-pngquant": "latest",
+    "lost": "latest",
+    "postcss-object-fit-images": "latest",
+    "postcss-triangle": "latest",
+    "poststylus": "latest",
+    "stream-combiner2": "latest"
+  },
+  "scripts": {
+    "postinstall": "node node_modules/bower/bin/bower install",
+    "build": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build",
+    "start": "./node_modules/.bin/gulp",
+    "test": "editorconfig-tools check *"
+  },
+  "engines": {
+    "node": "latest"
+  }
+}

@@ -1,0 +1,36 @@
+//== Buttons
+btn($padding-vertical=1.5rem, $padding-horizontal=3rem, $border-width=1px, $border-style=solid)
+	display inline-block
+	padding $padding-vertical $padding-horizontal
+	border $border-width $border-style
+	text-align center
+	white-space nowrap
+	vertical-align middle
+	cursor pointer
+	user-select none
+	font inherit
+	text-decoration none
+
+	&--hover
+	&:hover
+		text-decoration none
+
+	&--active
+	&:active
+	&:focus
+		text-decoration none
+		outline 0
+		box-shadow none
+
+	&--disabled
+	&:disabled
+		cursor not-allowed
+		a&
+			pointer-events none
+
+
+
+btn-colored($color=$text-color, $background=$gray-lighter, $border=$gray-lighter)
+	color $color
+	background-color $background
+	border-color $border

@@ -1,0 +1,9 @@
+slider-loop(num, prefix)
+	if num > 0
+		for i in (1..num)
+			if i == 1
+				\#{prefix}__slide{1}:checked ~ .{prefix}__mask .{prefix}__slides
+					margin-left 0
+			else
+				\#{prefix}__slide{i}:checked ~ .{prefix}__mask .{prefix}__slides
+					margin-left ( (-100 * i) + 100 ) + "%"
