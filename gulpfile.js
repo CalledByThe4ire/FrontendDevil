@@ -6,7 +6,8 @@ const path = {
 
       build: {
         html: "build/",
-        js: "build/js/",
+        jsDir: "build/js/",
+        jsBundle: "build/js/bundle.js",
         css: "build/css/",
         img: "build/img/",
         fonts: "build/fonts/"
@@ -16,12 +17,12 @@ const path = {
         rootFolder: "src/",
         pugFiles: "src/pug/_pages/*.pug",
         data: "src/pug/_data/",
-        htmlFolder: "src/html/",
+        htmlDir: "src/html/",
         htmlFiles: "src/html/*.html",
         js: "src/js/main.js",
         stylus: "src/stylus/partials/",
         styles: "src/stylus/main.styl",
-        imgFolder: "src/img/",
+        imgDir: "src/img/",
         imgFiles: ["src/img/**/!(svg-sprite.svg)", "!src/img/svg-sprite{,/**/*}"],
         pngFiles: "src/img/png-sprite/*.png",
         pngStyles: "src/stylus/partials/_mixins/",
@@ -77,14 +78,14 @@ lazyRequireTask("clean", "./tasks/clean", {
 lazyRequireTask("pug:build", "./tasks/pug", {
   src: path.src.pugFiles,
   data: path.src.data,
-  dst: path.src.htmlFolder
+  dst: path.src.htmlDir
 });
 
 
 
 lazyRequireTask("svg-sprite:build", "./tasks/svg-sprite", {
   src: path.src.svgFiles,
-  dst: path.src.imgFolder
+  dst: path.src.imgDir
 });
 
 
@@ -105,7 +106,7 @@ lazyRequireTask("js:build", "./tasks/js", {
 
 lazyRequireTask("png-sprite:build", "./tasks/png-sprite", {
   src: path.src.pngFiles,
-  pictures: path.src.imgFolder,
+  pictures: path.src.imgDir,
   styles: path.src.pngStyles
 });
 
