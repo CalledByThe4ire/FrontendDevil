@@ -46,6 +46,13 @@
     "poststylus": "latest",
     "stream-combiner2": "latest"
   },
+  "dependencies": {
+    "html5shiv": "latest",
+    "jquery": "latest",
+    "normalize-css": "latest",
+    "object-fit-images": "latest",
+    "picturefill": "latest"
+  },
   "scripts": {
     "postinstall": "node node_modules/bower/bin/bower install",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build",
