@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "autoprefixer": "latest",
-    "bower": "latest",
     "browser-sync": "latest",
     "browserify": "^13.1.0",
     "cross-env": "latest",
@@ -57,7 +56,6 @@
     "picturefill": "latest"
   },
   "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build",
     "start": "./node_modules/.bin/gulp",
     "test": "editorconfig-tools check *"
