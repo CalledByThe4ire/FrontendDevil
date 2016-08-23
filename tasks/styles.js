@@ -47,7 +47,7 @@ module.exports = function(options) {
       stylus({
         compress: false,
         "include css": true,
-        import: process.cwd() + "/bower_components/normalize-css/normalize.css",
+        import: process.cwd() + "/node_modules/normalize-css/normalize.css",
         use: [
           postStylus(processors)
         ]
