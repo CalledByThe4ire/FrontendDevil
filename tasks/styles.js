@@ -43,7 +43,6 @@ module.exports = function(options) {
 
     return combiner(
       gulp.src(options.src),
-      gulpIf(env, sourcemaps.init()),
       stylus({
         compress: false,
         "include css": true,
@@ -53,7 +52,8 @@ module.exports = function(options) {
         ]
       }),
       gulpIf( !env, combiner( postCSS([mqPacker({sort: true})]), minify(), rename("main.min.css") ) ),
-      gulpIf(env, sourcemaps.write()),
+      sourcemaps.init({loadMaps: true}),
+      sourcemaps.write(options.maps),
       gulp.dest(options.dst)
     ).on("error", notify.onError(
       function(err) {

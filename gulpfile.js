@@ -8,7 +8,9 @@ const path = {
         html: "build/",
         jsDir: "build/js/",
         jsBundle: "build/js/bundle.js",
+        jsMapDir: "build/js/maps/",
         css: "build/css/",
+        cssMapDir: "build/css/maps",
         img: "build/img/",
         fonts: "build/fonts/"
       },
@@ -121,6 +123,7 @@ lazyRequireTask("image:build", "./tasks/images", {
 
 lazyRequireTask("style:build", "./tasks/styles", {
   src: path.src.styles,
+  maps: path.build.cssMapDir,
   dst: path.build.css
 });
 
