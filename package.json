@@ -11,7 +11,7 @@
   "devDependencies": {
     "autoprefixer": "latest",
     "browser-sync": "latest",
-    "browserify": "^13.1.0",
+    "browserify": "latest",
     "cross-env": "latest",
     "css-mqpacker": "latest",
     "del": "latest",
@@ -45,8 +45,8 @@
     "postcss-triangle": "latest",
     "poststylus": "latest",
     "stream-combiner2": "latest",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-buffer": "latest",
+    "vinyl-source-stream": "latest"
   },
   "dependencies": {
     "html5shiv": "latest",
