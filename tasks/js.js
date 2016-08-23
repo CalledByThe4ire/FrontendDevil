@@ -14,26 +14,6 @@ const gulp = require("gulp"),
 const env = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
 
-// module.exports = function(options) {
-//   return function() {
-//     return combiner(
-//       browserify(options.src).bundle(),
-//       source(options.bundle),
-//       buffer(),
-//       gulpIf(!env, combiner(uglify(), rename("main.min.js"))),
-//       sourcemaps.init({loadMaps: true}),
-//       sourcemaps.write(options.maps),
-//       gulp.dest(options.dst)
-//     ).on("error", notify.onError(
-//       function(err) {
-//         return {
-//           title: "Javascript",
-//           message: err.message
-//         };
-//       }
-//     ));
-//   };
-// };
 
 module.exports = function(options) {
   return function() {
